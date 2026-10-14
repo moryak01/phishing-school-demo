@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка ссылки на фишинг</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <h1>Проверка ссылки на фишинг</h1>
+        <p class="subtitle">Учебный демонстрационный сервис</p>
+
+        <form id="check-form">
+            <input
+                type="text"
+                id="url-input"
+                placeholder="Например: https://example.com/login"
+                autocomplete="off"
+                required
+            >
+            <button type="submit" id="check-button">Проверить</button>
+        </form>
+
+        <div id="loading" class="hidden">Проверяем ссылку...</div>
+
+        <section id="result" class="hidden">
+            <div id="verdict-box">
+                <h2 id="verdict-title"></h2>
+                <div id="risk-score"></div>
+            </div>
+
+            <div class="reasons-block">
+                <h3>Что нашлось в ссылке:</h3>
+                <ul id="reasons-list"></ul>
+            </div>
+        </section>
+
+        <div class="disclaimer">
+            Сервис носит информационный и образовательный характер.
+            Он не заменяет антивирус, защитные расширения браузера и внимательность пользователя.
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
