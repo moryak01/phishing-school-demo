@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f5f9;
+    color: #1f2937;
+}
+
+.container {
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    margin: 0 0 8px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.subtitle {
+    margin: 0 0 24px;
+    text-align: center;
+    color: #6b7280;
+}
+
+#check-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#url-input {
+    flex: 1;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+#url-input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+#check-button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#check-button:hover {
+    background: #1d4ed8;
+}
+
+#check-button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+#loading {
+    text-align: center;
+    padding: 12px;
+    color: #4b5563;
+}
+
+.hidden {
+    display: none;
+}
+
+#verdict-box {
+    padding: 18px;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+#verdict-box.safe {
+    background: #16a34a;
+}
+
+#verdict-box.suspicious {
+    background: #d97706;
+}
+
+#verdict-box.high-risk {
+    background: #dc2626;
+}
+
+#verdict-title {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+#risk-score {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.reasons-block {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.reasons-block h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+#reasons-list {
+    margin: 0;
+    padding-left: 20px;
+}
+
+#reasons-list li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.disclaimer {
+    margin-top: 24px;
+    padding: 14px;
+    border-radius: 10px;
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    color: #9a3412;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    #check-form {
+        flex-direction: column;
+    }
+
+    .container {
+        margin: 16px;
+        padding: 18px;
+    }
+}
